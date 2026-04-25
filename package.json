@@ -1,6 +1,6 @@
 {
-  "name": "universal-color-picker",
-  "displayName": "Universal Color Picker",
+  "name": "color-picker-everywhere",
+  "displayName": "Color Picker Everywhere",
   "description": "Native VS Code color picker and inline swatches in every language. Detects hex, rgb/rgba, and hsl/hsla in YAML, JSON, Markdown, plain text, and any other file.",
   "version": "0.1.1",
   "publisher": "MiguelASantiestebanAguiar",
