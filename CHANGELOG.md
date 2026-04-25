@@ -2,6 +2,12 @@
 
 All notable changes to this extension will be documented in this file.
 
+## [0.1.1] - 2026-04-25
+
+### Changed
+- Set publisher to `MiguelASantiestebanAguiar` for the VS Code Marketplace.
+- Removed incorrect `Themes` category.
+
 ## [0.1.0] - 2026-04-25
 
 ### Added

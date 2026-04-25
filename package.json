@@ -2,8 +2,8 @@
   "name": "universal-color-picker",
   "displayName": "Universal Color Picker",
   "description": "Native VS Code color picker and inline swatches in every language. Detects hex, rgb/rgba, and hsl/hsla in YAML, JSON, Markdown, plain text, and any other file.",
-  "version": "0.1.0",
-  "publisher": "MiguelAguiarDEV",
+  "version": "0.1.1",
+  "publisher": "MiguelASantiestebanAguiar",
   "license": "MIT",
   "author": {
     "name": "Miguel Aguiar",
@@ -15,8 +15,7 @@
   },
   "categories": [
     "Other",
-    "Visualization",
-    "Themes"
+    "Visualization"
   ],
   "keywords": [
     "color",
