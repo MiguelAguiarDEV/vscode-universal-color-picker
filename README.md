@@ -1,37 +1,59 @@
-# Universal Color Picker
+# Color Picker Everywhere
 
-Native VS Code color picker and inline swatches in **every language**.
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/MiguelASantiestebanAguiar.color-picker-everywhere?label=Marketplace&color=007ACC)](https://marketplace.visualstudio.com/items?itemName=MiguelASantiestebanAguiar.color-picker-everywhere)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/MiguelASantiestebanAguiar.color-picker-everywhere?label=Installs)](https://marketplace.visualstudio.com/items?itemName=MiguelASantiestebanAguiar.color-picker-everywhere)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/MiguelASantiestebanAguiar.color-picker-everywhere?label=Rating)](https://marketplace.visualstudio.com/items?itemName=MiguelASantiestebanAguiar.color-picker-everywhere)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-VS Code's built-in color picker only works in CSS, SCSS, Less and HTML. This extension registers a `DocumentColorProvider` for all file schemes, so you get the same clickable color decorator and color picker in YAML, JSON, Markdown, TOML, plain text, shell scripts, source code — anywhere a color literal appears.
+**VS Code's native color picker, in every file.**
 
-## Features
+Out of the box, VS Code only shows colour swatches in CSS, SCSS, Less and HTML. Open a `theme.yaml`, a JSON design-token file, a Markdown table of brand colours, a shell script — nothing. This extension fixes that with a single regex-based `DocumentColorProvider` registered for all schemes.
 
-- Detects and renders clickable color swatches for:
-  - Hex: `#rgb`, `#rgba`, `#rrggbb`, `#rrggbbaa`
-  - RGB: `rgb(r, g, b)`, `rgba(r, g, b, a)`
-  - HSL: `hsl(h, s%, l%)`, `hsla(h, s%, l%, a)`
-- Click a swatch → opens VS Code's native color picker
-- Edits replace the value in the **same notation** as the original (hex stays hex, rgb stays rgb, hsl stays hsl)
-- Works in any file regardless of language
+![demo](docs/demo.gif)
 
-## Why
+## Install
 
-Configuration files (`theme.yaml`, design tokens in JSON, color tables in Markdown) often contain color literals, but VS Code's native picker stops at CSS-family languages. This extension fills that gap with a single regex-based provider — no per-language configuration required.
+```bash
+code --install-extension MiguelASantiestebanAguiar.color-picker-everywhere
+```
 
-## Usage
+Or open VS Code → Extensions → search **"Color Picker Everywhere"**.
 
-Install, reload, open any file with a color literal. The colored square appears next to the value. Click to edit.
+## What you get
+
+- **Clickable swatches** next to every colour literal — in any file.
+- **Native picker on click** — same UI you already know from CSS files.
+- **Notation-preserving edits** — hex stays hex, `rgb()` stays `rgb()`, `hsl()` stays `hsl()`. The picker doesn't rewrite your format.
+- **Zero configuration.** Install, reload, done.
+
+Detected formats:
+
+| Format | Example |
+|---|---|
+| Hex 3/4/6/8 | `#fff`, `#fff8`, `#ff8800`, `#ff8800cc` |
+| `rgb` / `rgba` | `rgb(255, 136, 0)`, `rgba(255, 136, 0, 0.8)` |
+| `hsl` / `hsla` | `hsl(28, 100%, 50%)`, `hsla(28, 100%, 50%, 0.8)` |
+
+## Why it exists
+
+I keep a single `theme.yaml` as the source of truth for my whole desktop (Hyprland, Waybar, Rofi, Kitty…). Editing it means staring at strings like `rgba(18,18,22,0.92)` with no visual feedback. CSS-only colour pickers don't help when half your codebase isn't CSS.
+
+This extension is the smallest possible piece of code that closes that gap: ~110 lines of JS, no dependencies, no configuration knobs.
 
 ## Compatibility
 
 - VS Code `^1.75.0`
-- Plays nicely with `naumovs.color-highlight` (background tint) — they don't conflict.
+- Plays nicely with [`naumovs.color-highlight`](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) (which only highlights, doesn't add a picker).
 
 ## Caveats
 
-- May produce duplicate swatches in CSS/SCSS/Less/HTML where Microsoft's language servers already provide one. If this bothers you, the file selector is configurable in `extension.js`.
-- Named colors (`red`, `blue`) and modern CSS color functions (`oklch()`, `lch()`, `color()`) are not yet supported — PRs welcome.
+- **CSS/SCSS/Less/HTML duplicate swatches**: Microsoft's language servers already provide one in those files. The selector in `extension.js` is configurable if it bothers you.
+- **Not yet supported**: named colours (`red`, `blue`), `oklch()`, `lch()`, `color()`. PRs welcome.
+
+## Contributing
+
+Fork → branch → PR. The whole extension is one file: [`extension.js`](extension.js).
 
 ## License
 
-[MIT](LICENSE) © Miguel Aguiar
+[MIT](LICENSE) © Miguel A. Santiesteban Aguiar
