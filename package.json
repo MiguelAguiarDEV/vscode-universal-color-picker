@@ -1,0 +1,60 @@
+{
+  "name": "universal-color-picker",
+  "displayName": "Universal Color Picker",
+  "description": "Native VS Code color picker and inline swatches in every language. Detects hex, rgb/rgba, and hsl/hsla in YAML, JSON, Markdown, plain text, and any other file.",
+  "version": "0.1.0",
+  "publisher": "MiguelAguiarDEV",
+  "license": "MIT",
+  "author": {
+    "name": "Miguel Aguiar",
+    "email": "miguel.santiesteban.aguiar@gmail.com",
+    "url": "https://github.com/MiguelAguiarDEV"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Themes"
+  ],
+  "keywords": [
+    "color",
+    "picker",
+    "swatch",
+    "yaml",
+    "json",
+    "markdown",
+    "hex",
+    "rgb",
+    "rgba",
+    "hsl",
+    "universal",
+    "decorator"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker/issues"
+  },
+  "homepage": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker#readme",
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.0.0"
+  }
+}
