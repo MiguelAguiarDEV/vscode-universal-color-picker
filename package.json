@@ -43,12 +43,12 @@
   "contributes": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker.git"
+    "url": "https://github.com/MiguelAguiarDEV/vscode-color-picker-everywhere.git"
   },
   "bugs": {
-    "url": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker/issues"
+    "url": "https://github.com/MiguelAguiarDEV/vscode-color-picker-everywhere/issues"
   },
-  "homepage": "https://github.com/MiguelAguiarDEV/vscode-universal-color-picker#readme",
+  "homepage": "https://github.com/MiguelAguiarDEV/vscode-color-picker-everywhere#readme",
   "scripts": {
     "package": "vsce package",
     "publish": "vsce publish"
