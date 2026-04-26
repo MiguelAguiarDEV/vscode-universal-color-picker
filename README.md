@@ -9,7 +9,7 @@
 
 Out of the box, VS Code only shows colour swatches in CSS, SCSS, Less and HTML. Open a `theme.yaml`, a JSON design-token file, a Markdown table of brand colours, a shell script — nothing. This extension fixes that with a single regex-based `DocumentColorProvider` registered for all schemes.
 
-![demo](docs/demo.gif)
+https://github.com/MiguelAguiarDEV/vscode-color-picker-everywhere/raw/main/docs/demo.mp4
 
 ## Install
 
